@@ -1,14 +1,38 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+
+import AppLayout from "./ui/AppLayout"
+
+import Homepage from "./pages/_Homepage"
+import Hotdrinks from "./pages/Hotdrinks"
+import FreshDetox from "./pages/FreshDetox"
+import SmoothieShakes from "./pages/SmoothieShakes"
+import LemonadeIceTea from "./pages/LemonadeIceTea"
+import TheWorldCocktails from "./pages/TheWorldCocktails"
+
+import PageNotFound from "./pages/PageNotFound"
+
 export default function App() {
 
   return (
 
-    <div className="font-mono">
+    <BrowserRouter>
+      <Routes>
 
-      <div>
-        Lorem ipsum dolor sit amet.
-      </div>
+        <Route element={<AppLayout />}>
+          <Route index element={<Navigate replace to="homepage" />} />
+          <Route path="homepage" element={<Homepage />} />
+          <Route path="hotdrinks" element={<Hotdrinks />} />
+          <Route path="hotdrinks/:username" element={<Hotdrinks />} />
+          <Route path="freshDetox" element={<FreshDetox />} />
+          <Route path="smoothieShakes" element={<SmoothieShakes />} />
+          <Route path="lemonadeIceTea" element={<LemonadeIceTea />} />
+          <Route path="theWorldCocktails" element={<TheWorldCocktails />} />
+        </Route>
 
-    </div>
+        <Route path="*" element={<PageNotFound />} />
+
+      </Routes>
+    </BrowserRouter>
 
   )
 
