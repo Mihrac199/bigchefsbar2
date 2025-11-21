@@ -1,10 +1,10 @@
 import NavbarItem from "./NavbarItem"
 
-export default function Navbar() {
+export default function Navbar({ onClose }) {
 
      return (
 
-          <nav>
+          <nav onClick={onClose} className="absolute top-30 p-3 border rounded-4xl">
                <ul>
 
                     <NavbarItem to={"hotdrinks"}>Hotdrinks</NavbarItem>
