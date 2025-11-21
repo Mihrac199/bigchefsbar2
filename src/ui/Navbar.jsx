@@ -4,7 +4,7 @@ export default function Navbar({ onClose }) {
 
      return (
 
-          <nav onClick={onClose} className="absolute top-30 p-3 border rounded-4xl">
+          <nav onClick={onClose} className="absolute top-46 right-1 p-3 border rounded-4xl">
                <ul>
 
                     <NavbarItem to={"hotdrinks"}>Hotdrinks</NavbarItem>

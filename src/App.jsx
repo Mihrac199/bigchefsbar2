@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 
 import AppLayout from "./ui/AppLayout"
@@ -13,16 +14,17 @@ import PageNotFound from "./pages/PageNotFound"
 
 export default function App() {
 
+  const [username, setUsername] = useState("");
+
   return (
 
     <BrowserRouter>
       <Routes>
 
-        <Route element={<AppLayout />}>
+        <Route element={<AppLayout username={username} />}>
           <Route index element={<Navigate replace to="homepage" />} />
-          <Route path="homepage" element={<Homepage />} />
+          <Route path="homepage" element={<Homepage setUsername={setUsername} />} />
           <Route path="hotdrinks" element={<Hotdrinks />} />
-          <Route path="hotdrinks/:username" element={<Hotdrinks />} />
           <Route path="freshDetox" element={<FreshDetox />} />
           <Route path="smoothieShakes" element={<SmoothieShakes />} />
           <Route path="lemonadeIceTea" element={<LemonadeIceTea />} />

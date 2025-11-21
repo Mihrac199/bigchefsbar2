@@ -5,7 +5,7 @@ export default function Logo() {
           <img
                src="/logo.png"
                alt="logo"
-               className="h-10"
+               className="w-30"
           />
 
      )

@@ -6,7 +6,9 @@ export default function NavbarItem({ to, children }) {
 
           <li>
 
-               <NavLink to={"/" + to}>{children}</NavLink>
+               <NavLink to={"/" + to}>
+                    <p className="underline">{children}</p>
+               </NavLink>
 
           </li>
 
