@@ -7,7 +7,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import AppLayout from "./ui/AppLayout"
 
 import Homepage from "./pages/_Homepage"
-import Hotdrinks from "./pages/Hotdrinks"
+import Hotdrinks from "./pages/Hotdrinks/Hotdrinks"
 import FreshDetox from "./pages/FreshDetox"
 import SmoothieShakes from "./pages/SmoothieShakes"
 import LemonadeIceTea from "./pages/LemonadeIceTea"
