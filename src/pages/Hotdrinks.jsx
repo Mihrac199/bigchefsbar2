@@ -1,11 +1,25 @@
+import Spinner from "../ui/Spinner/Spinner"
+
+import useFetchData from "../hooks/useFetchData"
+
+import { getHotDrinks } from "../services/apiHotdrinks"
+
 export default function Hotdrinks() {
 
-     return (
+     const {
+          isLoading: isLoadingHotdrinks,
+          data: hotdrinks,
+          error: errorHotdrinks
+     } =
+          useFetchData(["hotdrinks"], getHotDrinks);
 
-          <div>
-               Hotdrinks
-          </div>
+     if (isLoadingHotdrinks) {
 
-     )
+          return (
+               <div className="flex justify-center items-center h-full">
+                    <Spinner />
+               </div>
+          )
+     }
 
 }

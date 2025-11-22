@@ -22,7 +22,7 @@ export default function Header({ username }) {
                          <div>
 
                               <button
-                                   className="cursor-pointer p-1.5 flex justify-center items-center gap-1"
+                                   className={`cursor-pointer p-1.5 flex justify-center items-center gap-1 ${show ? `border border-stone-500 rounded-4xl p-0.5` : ``}`}
                                    onClick={() => setShow(show => !show)}>
                                    <span><FaMartiniGlassEmpty /></span>
                                    <p>Products</p>
@@ -37,7 +37,7 @@ export default function Header({ username }) {
                          </div>
                     </>
                }
-          </header>
+          </header >
 
      )
 
