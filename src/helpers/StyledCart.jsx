@@ -11,7 +11,7 @@ export default function StyledCart({ product }) {
           <li className="flex flex-col gap-5 rounded-2xl shadow-2xl p-2 mb-10">
 
                <img
-                    className="w-72 rounded-full mx-auto"
+                    className="h-72 rounded-full mx-auto"
                     src={image}
                     alt="name" />
 

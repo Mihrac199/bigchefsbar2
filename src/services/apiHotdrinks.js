@@ -1,4 +1,4 @@
-import supabase, { supabaseUrl } from "./supabase.js"
+import supabase, { supabaseUrl } from "./supabase"
 
 export async function getHotDrinks() {
 
