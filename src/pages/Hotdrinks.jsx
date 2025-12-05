@@ -12,9 +12,7 @@ export default function Hotdrinks() {
           isLoading: isLoadingHotdrinks,
           data: hotdrinks,
           error: errorHotdrinks
-     } =
-          useFetchData(["hotdrinks"], getHotDrinks);
-
+     } = useFetchData(["hotdrinks"], getHotDrinks);
 
      if (isLoadingHotdrinks) return <Spinner />
 
